@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  env:
+    build: .
+    image: ubuntu-build-mysql
+    container_name: ubuntu-build-mysql
+    ports:
+      - "45678:22"
+      - "8730:873"
+    cap_add:
+      - ALL
